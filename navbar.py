@@ -1,21 +1,21 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+# from streamlit_option_menu import option_menu
 # import CarSalesProject
 # import car_price_analysis
 # import home
 
 
 def showNavigation():
-    with st.sidebar:
-        selected = option_menu(
-            menu_title=None,
-            options= ["Home", "Car Price Prediction", "Data Analysis"],
-            icons=["house", "book", "envelope"],
-            menu_icon="cast",
-            default_index=0,
+    # with st.sidebar:
+    #     selected = option_menu(
+    #         menu_title=None,
+    #         options= ["Home", "Car Price Prediction", "Data Analysis"],
+    #         icons=["house", "book", "envelope"],
+    #         menu_icon="cast",
+    #         default_index=0,
 
-        )
-
+    #     )
+    selected = st.selectbox('Select Option', ['Home', 'Car Price Prediction', 'Data Analysis'])
     if selected == "Home":
         st.write("Home")
         # home.showHome()
